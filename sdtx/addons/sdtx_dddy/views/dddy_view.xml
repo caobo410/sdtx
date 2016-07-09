@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_form_sdtx_dddy" model="ir.ui.view">
+            <field name="name">Order From</field>
+            <field name="model">sdtx.dddy</field>
+            <field name="arch" type="xml">
+                <form string="from" version="7.0">
+                    <sheet>
+                        <h1>
+                            NO.<field name="name" class="oe_inline"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="recipient"/>
+                                <field name="express"/>
+                                <field name="express_id"/>
+                                <field name="commodity"/>
+                                <field name="number"/>
+                                <field name="price"/>
+                                <field name="total_price"/>
+                            </group>
+                            <group>
+                                <field name="recipient_tel"/>
+                                <field name="recipient_city"/>
+                                <field name="recipient_street"/>
+                                <field name="type"/>
+                                <field name="wight"/>
+                                <field name="is_print"/>
+                                <field name="messages"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="sender"/>
+                                <field name="sender_tel"/>
+                                <field name="sender_phone"/>
+                            </group>
+                            <group>
+                                <field name="sender_city"/>
+                                <field name="sender_street"/>
+                                <field name="warehouse_id"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="user_id"/>
+                            </group>
+                            <group>
+                                <field name="date_confirm"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+
+        </record>
+
+        <record id="view_tree_sdtx_dddy" model="ir.ui.view">
+            <field name="name">Order Tree</field>
+            <field name="model">sdtx.dddy</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="" >
+                    <field name="name"/>
+                    <field name="recipient"/>
+                    <field name="rec_id"/>
+                    <field name="recipient_tel"/>
+                    <field name="express"/>
+                    <field name="commodity"/>
+                    <field name="number"/>
+                    <field name="price"/>
+                    <field name="type"/>
+                    <field name="wight"/>
+                    <field name="total_price"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_search_sdtx_dddy" model="ir.ui.view">
+            <field name="name">Order Search</field>
+            <field name="model">sdtx.dddy</field>
+            <field name="arch" type="xml">
+                <search string="search">
+                    <field name="name"/>
+                    <field name="recipient"/>
+                    <field name="commodity"/>
+                    <field name="warehouse_id"/>
+                    <field name="type"/>
+                    <field name="is_print" domain="[('is_print','=',False]"/>
+                    <separator/>
+                    <group expand="0" string="group">
+                        <filter string="recipient" domain="[]" context="{'group_by':'recipient'}"/>
+                        <filter string="commodity" domain="[]" context="{'group_by':'commodity'}"/>
+                        <filter string="type" domain="[]" context="{'group_by':'type'}"/>
+                        <filter string="is_print" domain="[]" context="{'group_by':'is_print'}"/>
+                        <filter string="warehouse_id" domain="[]" context="{'group_by':'warehouse_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+        <!--  窗体事件 查询  Search  graph,gantt-->
+        <record id="action_sdtx_dddy" model="ir.actions.act_window">
+            <field name="name">Order Print</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sdtx.dddy</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_is_print":'no'}</field>
+            <field name="domain">[('sender','=',uid)]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Order Management
+                </p>
+            </field>
+        </record>
+        <!--  窗体事件 查询  Search  graph,gantt-->
+        <record id="action_sdtx_dddy_admin" model="ir.actions.act_window">
+            <field name="name">Order Print</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sdtx.dddy</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Order Management
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Order Management" id="menu_one_sdtx_dddy" sequence="1"/>
+        <menuitem name="Order Management" id="menu_two_sdtx_dddy" parent="menu_one_sdtx_dddy" sequence="2"/>
+        <menuitem name="Order Print" id="menu_three_sdtx_dddy" parent="menu_two_sdtx_dddy" action="action_sdtx_dddy" sequence="3"/>
+        <menuitem name="Order Distribution" id="menu_two_sdtx_dddy_distribution" parent="menu_one_sdtx_dddy" sequence="3"/>
+        <menuitem name="Order Distribution" id="menu_three_sdtx_dddy_admin" parent="menu_two_sdtx_dddy_distribution" action="action_sdtx_dddy_admin" sequence="1"/>
+
+
+    </data>
+</openerp>

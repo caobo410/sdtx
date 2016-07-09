@@ -1,0 +1,481 @@
+# Translation of SHMJ Server.
+# This file contains the translation of the following modules:
+# 	* sdtx_dddy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: SHMJ Server 1.1rc\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-05 14:01+0000\n"
+"PO-Revision-Date: 2016-07-05 22:38+0800\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: sdtx_dddy
+#: model:ir.actions.act_window,help:sdtx_dddy.action_sdtx_dddy
+#: model:ir.actions.act_window,help:sdtx_dddy.action_sdtx_dddy_admin
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                    Order Management\n"
+"                </p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                    订单管理\n"
+"                </p>\n"
+"            "
+
+#. module: sdtx_dddy
+#: model:ir.actions.act_window,help:sdtx_dddy.action_sender_address
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                    Sender Address\n"
+"                </p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                    收件人地址\n"
+"                </p>\n"
+"            "
+
+#. module: sdtx_dddy
+#: model:ir.actions.act_window,help:sdtx_dddy.action_sdtx_import
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                    import order\n"
+"                </p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                   导入订单\n"
+"                </p>\n"
+"            "
+
+#. module: sdtx_dddy
+#: model:ir.actions.act_window,help:sdtx_dddy.action_sdtx_express
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                    模块说明\n"
+"                </p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                    快递公司\n"
+"                </p>\n"
+"            "
+
+#. module: sdtx_dddy
+#: view:distribute.order:sdtx_dddy.distribute_order_view
+#: view:merge.order:sdtx_dddy.merge_order_view
+#: view:sdtx.import:sdtx_dddy.view_form_sdtx_import
+msgid "Cancel"
+msgstr "取消"
+
+#. module: sdtx_dddy
+#: field:sender.address,name:0 help:sender.address,name:0
+msgid "Code"
+msgstr "订单编号"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,commodity:0 help:sdtx.dddy,commodity:0
+msgid "Commodity"
+msgstr "商品"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,commodity_status:0 help:sdtx.dddy,commodity_status:0
+msgid "Commodity status"
+msgstr "商品状态"
+
+#. module: sdtx_dddy
+#: model:ir.ui.menu,name:sdtx_dddy.menu_two_configure
+msgid "Configure"
+msgstr "Configure"
+
+#. module: sdtx_dddy
+#: field:distribute.order,create_uid:0 field:merge.order,create_uid:0
+#: field:sdtx.dddy,create_uid:0 field:sdtx.express,create_uid:0
+#: field:sdtx.import,create_uid:0 field:sender.address,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. module: sdtx_dddy
+#: field:distribute.order,create_date:0 field:merge.order,create_date:0
+#: field:sdtx.dddy,create_date:0 field:sdtx.express,create_date:0
+#: field:sdtx.import,create_date:0 field:sender.address,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: sdtx_dddy
+#: field:merge.order,date_time:0 field:sdtx.dddy,date_confirm:0
+#: help:sdtx.dddy,date_confirm:0 field:sdtx.express,date_confirm:0
+#: help:sdtx.express,date_confirm:0 field:sdtx.import,date_confirm:0
+#: help:sdtx.import,date_confirm:0 field:sender.address,date_confirm:0
+#: help:sender.address,date_confirm:0
+msgid "Date"
+msgstr "创建日期"
+
+#. module: sdtx_dddy
+#: view:distribute.order:sdtx_dddy.distribute_order_view
+#: field:distribute.order,express_id:0
+#: model:ir.ui.menu,name:sdtx_dddy.menu_three_sdtx_express
+#: field:sdtx.dddy,express_id:0 field:sdtx.express,name:0
+#: help:sdtx.express,name:0
+msgid "Express"
+msgstr "快递公司"
+
+#. module: sdtx_dddy
+#: field:distribute.order,end:0
+msgid "Express End"
+msgstr "结束单号"
+
+#. module: sdtx_dddy
+#: field:distribute.order,start:0
+msgid "Express Start"
+msgstr "开始单号"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,express:0 help:sdtx.dddy,express:0
+msgid "Express code"
+msgstr "快递公司"
+
+#. module: sdtx_dddy
+#: field:distribute.order,id:0 field:merge.order,id:0 field:sdtx.dddy,id:0
+#: field:sdtx.express,id:0 field:sdtx.import,id:0 field:sender.address,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: sdtx_dddy
+#: model:ir.ui.menu,name:sdtx_dddy.menu_three_sdtx_import
+msgid "Import Order"
+msgstr "导入订单"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,is_print:0 help:sdtx.dddy,is_print:0
+msgid "Is print"
+msgstr "已打印"
+
+#. module: sdtx_dddy
+#: field:distribute.order,write_uid:0 field:merge.order,write_uid:0
+#: field:sdtx.dddy,write_uid:0 field:sdtx.express,write_uid:0
+#: field:sdtx.import,write_uid:0 field:sender.address,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: sdtx_dddy
+#: field:distribute.order,write_date:0 field:merge.order,write_date:0
+#: field:sdtx.dddy,write_date:0 field:sdtx.express,write_date:0
+#: field:sdtx.import,write_date:0 field:sender.address,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,logistics:0 help:sdtx.dddy,logistics:0
+msgid "Logistics"
+msgstr "物流"
+
+#. module: sdtx_dddy
+#: view:distribute.order:sdtx_dddy.distribute_order_view
+#: model:ir.actions.act_window,name:sdtx_dddy.action_merge_order
+#: view:merge.order:sdtx_dddy.merge_order_view
+msgid "Merge Order"
+msgstr "订单合并"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,messages:0 help:sdtx.dddy,messages:0
+#: field:sender.address,messages:0 help:sender.address,messages:0
+msgid "Messages"
+msgstr "备注"
+
+#. module: sdtx_dddy
+#: view:sdtx.dddy:sdtx_dddy.view_form_sdtx_dddy field:sdtx.express,code:0
+#: help:sdtx.express,code:0
+msgid "NO."
+msgstr "订单编号"
+
+#. module: sdtx_dddy
+#: selection:sdtx.dddy,is_print:0
+msgid "No"
+msgstr "No."
+
+#. module: sdtx_dddy
+#: view:sdtx.import:sdtx_dddy.view_form_sdtx_import
+#: view:sender.address:sdtx_dddy.view_form_sender_address
+msgid "No."
+msgstr "No."
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,number:0 help:sdtx.dddy,number:0
+msgid "Num"
+msgstr "数量"
+
+#. module: sdtx_dddy
+#: field:sdtx.import,operate_time:0
+msgid "Operate Time"
+msgstr "操作时间"
+
+#. module: sdtx_dddy
+#: field:merge.order,user_id:0 field:sdtx.dddy,user_id:0
+#: field:sdtx.import,user_id:0 field:sender.address,user_id:0
+msgid "Operator"
+msgstr "创建人"
+
+#. module: sdtx_dddy
+#: field:sdtx.express,user_id:0
+msgid "Opertor"
+msgstr "操作人"
+
+#. module: sdtx_dddy
+#: model:ir.ui.menu,name:sdtx_dddy.menu_three_sdtx_dddy_admin
+#: model:ir.ui.menu,name:sdtx_dddy.menu_two_sdtx_dddy_distribution
+msgid "Order Distribution"
+msgstr "订单分配"
+
+#. module: sdtx_dddy
+#: model:ir.ui.menu,name:sdtx_dddy.menu_one_sdtx_dddy
+#: model:ir.ui.menu,name:sdtx_dddy.menu_two_sdtx_dddy
+msgid "Order Management"
+msgstr "订单管理"
+
+#. module: sdtx_dddy
+#: model:ir.actions.act_window,name:sdtx_dddy.action_sdtx_dddy
+#: model:ir.actions.act_window,name:sdtx_dddy.action_sdtx_dddy_admin
+#: model:ir.ui.menu,name:sdtx_dddy.menu_three_sdtx_dddy
+msgid "Order Print"
+msgstr "订单打印"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,order_time:0 help:sdtx.dddy,order_time:0
+msgid "Order Time"
+msgstr "打印日期"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,payment_time:0 help:sdtx.dddy,payment_time:0
+msgid "Payment Time"
+msgstr "付款时间"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,price:0 help:sdtx.dddy,price:0
+msgid "Price"
+msgstr "价格"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,rec_id:0 help:sdtx.dddy,rec_id:0
+msgid "Rec Id"
+msgstr "订单主键"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,recipient:0 help:sdtx.dddy,recipient:0
+msgid "Recipient"
+msgstr "收件人"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,recipient_city:0 help:sdtx.dddy,recipient_city:0
+msgid "Recipient City"
+msgstr "城市"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,recipient_tel:0 help:sdtx.dddy,recipient_tel:0
+msgid "Recipient Tel"
+msgstr "电话"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,recipient_street:0 help:sdtx.dddy,recipient_street:0
+msgid "Recipient_Street"
+msgstr "街道"
+
+#. module: sdtx_dddy
+#: model:ir.model,name:sdtx_dddy.model_report
+msgid "Report"
+msgstr "报表"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,sender:0 field:sender.address,sender:0
+msgid "Sender"
+msgstr "发件人"
+
+#. module: sdtx_dddy
+#: model:ir.ui.menu,name:sdtx_dddy.menu_three_sender_address
+msgid "Sender Address"
+msgstr "仓库"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,sender_city:0 help:sdtx.dddy,sender_city:0
+#: field:sender.address,sender_city:0 help:sender.address,sender_city:0
+msgid "Sender City"
+msgstr "城市"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,sender_phone:0 help:sdtx.dddy,sender_phone:0
+#: field:sender.address,sender_phone:0 help:sender.address,sender_phone:0
+msgid "Sender Phone"
+msgstr "手机"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,sender_street:0 help:sdtx.dddy,sender_street:0
+#: field:sender.address,sender_street:0 help:sender.address,sender_street:0
+msgid "Sender Street"
+msgstr "街道"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,sender_tel:0 help:sdtx.dddy,sender_tel:0
+#: field:sender.address,sender_tel:0 help:sender.address,sender_tel:0
+msgid "Sender Tel"
+msgstr "电话"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,total_price:0 help:sdtx.dddy,total_price:0
+msgid "Total Price"
+msgstr "总价"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,type:0 help:sdtx.dddy,type:0
+msgid "Type"
+msgstr "商品类型"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,address_id:0
+msgid "WareHouse"
+msgstr "仓库"
+
+#. module: sdtx_dddy
+#: field:sender.address,warehouse:0 help:sender.address,warehouse:0
+msgid "Warehouse"
+msgstr "仓库"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,wight:0 help:sdtx.dddy,wight:0
+msgid "Wight"
+msgstr "商品重量"
+
+#. module: sdtx_dddy
+#: selection:sdtx.dddy,is_print:0
+msgid "YES"
+msgstr "YES"
+
+#. module: sdtx_dddy
+#: view:sdtx.dddy:sdtx_dddy.view_search_sdtx_dddy
+msgid "address_id"
+msgstr "仓库"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,name:0 help:sdtx.dddy,name:0 field:sdtx.import,name:0
+#: help:sdtx.import,name:0
+msgid "code"
+msgstr "订单编号"
+
+#. module: sdtx_dddy
+#: view:sdtx.dddy:sdtx_dddy.view_search_sdtx_dddy
+msgid "commodity"
+msgstr "商品"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,defaut_id:0 help:sdtx.dddy,defaut_id:0
+msgid "defaut_id"
+msgstr "defaut_id"
+
+#. module: sdtx_dddy
+#: view:distribute.order:sdtx_dddy.distribute_order_view
+#: model:ir.actions.act_window,name:sdtx_dddy.action_distribute_order
+msgid "distribute Order"
+msgstr "distribute Order"
+
+#. module: sdtx_dddy
+#: view:sdtx.dddy:sdtx_dddy.view_form_sdtx_dddy
+#: view:sdtx.import:sdtx_dddy.view_form_sdtx_import
+#: view:sender.address:sdtx_dddy.view_form_sender_address
+msgid "from"
+msgstr "窗体"
+
+#. module: sdtx_dddy
+#: view:sdtx.dddy:sdtx_dddy.view_search_sdtx_dddy
+msgid "group"
+msgstr "分组"
+
+#. module: sdtx_dddy
+#: view:sdtx.dddy:sdtx_dddy.view_search_sdtx_dddy
+msgid "is_print"
+msgstr "is_print"
+
+#. module: sdtx_dddy
+#: view:distribute.order:sdtx_dddy.distribute_order_view
+#: view:merge.order:sdtx_dddy.merge_order_view
+#: view:sdtx.import:sdtx_dddy.view_form_sdtx_import
+msgid "or"
+msgstr "or"
+
+#. module: sdtx_dddy
+#: field:merge.order,name:0
+msgid "order"
+msgstr "order"
+
+#. module: sdtx_dddy
+#: view:sdtx.dddy:sdtx_dddy.view_search_sdtx_dddy
+msgid "recipient"
+msgstr "收件人"
+
+#. module: sdtx_dddy
+#: model:ir.actions.act_window,name:sdtx_dddy.action_sdtx_express
+msgid "sdtx.express.actions"
+msgstr "快递公司"
+
+#. module: sdtx_dddy
+#: model:ir.actions.act_window,name:sdtx_dddy.action_sdtx_import
+msgid "sdtx.import.actions"
+msgstr "导入订单"
+
+#. module: sdtx_dddy
+#: view:sdtx.dddy:sdtx_dddy.view_search_sdtx_dddy
+msgid "search"
+msgstr "查询"
+
+#. module: sdtx_dddy
+#: model:ir.actions.act_window,name:sdtx_dddy.action_sender_address
+msgid "sender.address.actions"
+msgstr "地址"
+
+#. module: sdtx_dddy
+#: field:sdtx.dddy,status:0 help:sdtx.dddy,status:0
+msgid "status"
+msgstr "状态"
+
+#. module: sdtx_dddy
+#: view:sdtx.import:sdtx_dddy.view_tree_sdtx_import
+#: view:sender.address:sdtx_dddy.view_tree_sender_address
+msgid "tree"
+msgstr "列表"
+
+#. module: sdtx_dddy
+#: view:sdtx.dddy:sdtx_dddy.view_search_sdtx_dddy
+msgid "type"
+msgstr "商品类型"
+
+#. module: sdtx_dddy
+#: view:sdtx.import:sdtx_dddy.view_form_sdtx_import
+msgid "导入仓库信息"
+msgstr "导入仓库信息"
+
+#. module: sdtx_dddy
+#: view:sdtx.import:sdtx_dddy.view_form_sdtx_import
+msgid "导入物流信息"
+msgstr "导入物流信息"
+
+#. module: sdtx_dddy
+#: view:sdtx.import:sdtx_dddy.view_form_sdtx_import
+msgid "导入订单列表"
+msgstr "导入订单列表"
+
+#. module: sdtx_dddy
+#: view:sdtx.import:sdtx_dddy.view_form_sdtx_import
+msgid "您确认要导入数据吗?"
+msgstr "您确认要导入数据吗?"
+
+#. module: sdtx_dddy
+#: view:sdtx.express:sdtx_dddy.view_form_sdtx_express
+msgid "窗体名称"
+msgstr "窗体名称"

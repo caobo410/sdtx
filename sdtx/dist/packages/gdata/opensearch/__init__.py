@@ -1,0 +1,1 @@
+../../../../../share/pyshared/gdata/opensearch/__init__.py

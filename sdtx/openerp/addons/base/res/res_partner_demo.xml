@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+        <!--
+        Resource: res.partner.category
+        -->
+
+        <record id="res_partner_category_0" model="res.partner.category">
+            <field name="name">Partner</field>
+        </record>
+        <record id="res_partner_category_1" model="res.partner.category">
+            <field name="name">Supplier</field>
+        </record>
+        <record id="res_partner_category_2" model="res.partner.category">
+            <field name="name">Prospect</field>
+        </record>
+        <record id="res_partner_category_3" model="res.partner.category">
+            <field name="name">Employee</field>
+        </record>
+        <record id="res_partner_category_4" model="res.partner.category">
+            <field name="name">Gold</field>
+            <field name="parent_id" ref="res_partner_category_0"/>
+        </record>
+        <record id="res_partner_category_5" model="res.partner.category">
+            <field name="name">Silver</field>
+            <field name="parent_id" ref="res_partner_category_0"/>
+        </record>
+        <record id="res_partner_category_6" model="res.partner.category">
+            <field name="name">Bronze</field>
+            <field name="parent_id" ref="res_partner_category_0"/>
+        </record>
+        <record id="res_partner_category_7" model="res.partner.category">
+            <field name="name">IT Services</field>
+            <field name="parent_id" ref="res_partner_category_0"/>
+        </record>
+        <record id="res_partner_category_8" model="res.partner.category">
+            <field name="name">Consultancy Services</field>
+        </record>
+        <record id="res_partner_category_9" model="res.partner.category">
+            <field name="name">Components Buyer</field>
+        </record>
+        <record id="res_partner_category_11" model="res.partner.category">
+            <field name="name">Services</field>
+        </record>
+        <record id="res_partner_category_12" model="res.partner.category">
+            <field name="name">Office Supplies</field>
+        </record>
+        <record id="res_partner_category_13" model="res.partner.category">
+            <field name="name">Distributor</field>
+        </record>
+        <record id="res_partner_category_14" model="res.partner.category">
+            <field name="name">Manufacturer</field>
+        </record>
+        <record id="res_partner_category_15" model="res.partner.category">
+            <field name="name">Wholesaler</field>
+        </record>
+        <record id="res_partner_category_16" model="res.partner.category">
+            <field name="name">Retailer</field>
+        </record>
+        <record id="res_partner_category_17" model="res.partner.category">
+            <field name="name">Company Contact</field>
+        </record>
+
+       <!--
+        Resource: res.partner
+        -->
+
+        <record id="res_partner_1" model="res.partner">
+            <field name="name">ASUSTeK</field>
+            <field eval="[(6, 0, [ref('res_partner_category_13'), ref('res_partner_category_12')])]" name="category_id"/>
+            <field name="supplier">1</field>
+            <field eval="0" name="customer"/>
+            <field name="is_company">1</field>
+            <field name="city">Taipei</field>
+            <field name="zip">106</field>
+            <field name="country_id" ref="base.tw"/>
+            <field name="street">31 Hong Kong street</field>
+            <field name="email">asusteK@yourcompany.example.com</field>
+            <field name="phone">(+886) (02) 4162 2023</field>
+            <field name="website">http://www.asustek.com</field>
+            <field name="image" type="base64" file="base/static/img/public_user-image.png"/>
+        </record>
+        <record id="res_partner_2" model="res.partner">
+            <field name="name">Agrolait</field>
+            <field eval="[(6, 0, [ref('base.res_partner_category_7'), ref('base.res_partner_category_9')])]" name="category_id"/>
+            <field name="is_company">1</field>
+            <field name="city">Wavre</field>
+            <field name="zip">1300</field>
+            <field name="country_id" ref="base.be"/>
+            <field name="street">69 rue de Namur</field>
+            <field name="email">agrolait@yourcompany.example.com</field>
+            <field name="phone">+32 10 588 558</field>
+            <field name="website">http://www.agrolait.com</field>
+            <field name="image" type="base64" file="base/static/img/public_user-image.png"/>
+        </record>
+        <record id="res_partner_3" model="res.partner">
+            <field name="name">China Export</field>
+            <field name="supplier">1</field>
+            <field eval="[(6, 0, [ref('res_partner_category_8'), ref('res_partner_category_14')])]" name="category_id"/>
+            <field name="is_company">1</field>
+            <field name="city">Shanghai</field>
+            <field name="zip">200000</field>
+            <field model="res.country" name="country_id" search="[('name','=','China')]"/>
+            <field name="country_id" ref="base.cn"/>
+            <field name="street">52 Chop Suey street</field>
+            <field name="email">chinaexport@yourcompany.example.com</field>
+            <field name="phone">+86 21 6484 5671</field>
+            <field name="website">http://www.chinaexport.com/</field>
+            <field name="image" type="base64" file="base/static/img/public_user-image.png"/>
+        </record>
+        
+        <record id="res_partner_4" model="res.partner">
+            <field name="name">Delta PC</field>
+            <field eval="[(6, 0, [ref('res_partner_category_13'), ref('res_partner_category_12')])]" name="category_id"/>
+            <field eval="0" name="customer"/>
+            <field eval="1" name="supplier"/>
+            <field name="is_company">1</field>
+            <field name="city">Fremont</field>
+            <field name="zip">94538</field>
+            <field name="country_id" ref="base.us"/>
+            <field model="res.country.state" name="state_id" search="[('code','ilike','ca')]"/>
+            <field name="street">3661 Station Street</field>
+            <field name="email">deltapc@yourcompany.example.com</field>
+            <field name="phone">+1 510 340 2385</field>
+            <field name="website">http://www.distribpc.com/</field>
+            <field name="image" type="base64" file="base/static/img/public_user-image.png"/>
+        </record>
+
+        <record id="res_partner_address_1" model="res.partner">
+            <field name="name">Tang Tsui</field>
+            <field name="parent_id" eval="ref('res_partner_1')"/>
+            <field name="use_parent_address">1</field>
+            <field name="function">Service Manager</field>
+            <field name="email">tang@asustek.com</field>
+            <field name="supplier">1</field>
+            <field eval="0" name="customer"/>
+        </record>
+        <record id="res_partner_address_2" model="res.partner">
+            <field name="name">Joseph Walters</field>
+            <field name="parent_id" eval="ref('res_partner_1')"/>
+            <field name="use_parent_address">1</field>
+            <field name="function">Store Manager</field>
+            <field name="email">joseph.walters@asustek.com</field>
+            <field name="supplier">1</field>
+            <field eval="0" name="customer"/>
+        </record>
+        <record id="res_partner_address_7" model="res.partner">
+            <field name="name">Richard Ellis</field>
+            <field name="parent_id" eval="ref('res_partner_4')"/>
+            <field name="use_parent_address">1</field>
+            <field name="function">Production Supervisor</field>
+            <field name="email">richard.ellis@deltapc.example.com</field>
+            <field name="supplier">1</field>
+            <field eval="0" name="customer"/>
+        </record>
+        <record id="res_partner_address_8" model="res.partner">
+            <field name="name">Paul Williams</field>
+            <field name="parent_id" eval="ref('res_partner_4')"/>
+            <field name="use_parent_address">1</field>
+            <field name="function">Line Mechanic</field>
+            <field name="email">paul.williams@deltapc.example.com</field>
+            <field name="supplier">1</field>
+            <field eval="0" name="customer"/>
+        </record>
+        <record id="res_partner_address_9" model="res.partner">
+            <field name="name">Brian Williams</field>
+            <field name="parent_id" eval="ref('res_partner_4')"/>
+            <field name="use_parent_address">1</field>
+            <field name="function">Computer Technician</field>
+            <field name="email">brian.williams@deltapc.example.com</field>
+            <field name="supplier">1</field>
+            <field eval="0" name="customer"/>
+        </record>
+
+    </data>
+</openerp>
+

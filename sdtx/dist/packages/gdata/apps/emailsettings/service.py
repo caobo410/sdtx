@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/gdata/apps/emailsettings/service.py

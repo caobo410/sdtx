@@ -1,0 +1,1 @@
+../../../../../share/pyshared/gdata/blogger/service.py

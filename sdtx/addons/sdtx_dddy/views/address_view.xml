@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_form_sdtx_warehouse" model="ir.ui.view">
+            <field name="name">sdtx.warehouse.form</field>
+            <field name="model">sdtx.warehouse</field>
+            <field name="arch" type="xml">
+                <form string="from" version="7.0">
+                    <sheet>
+                        <h1>
+                            No.<field name="name" class="oe_inline"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="warehouse"/>
+                                <field name="sender"/>
+                                <field name="sender_tel"/>
+                                <field name="sender_phone"/>
+                                <field name="messages"/>
+                            </group>
+                            <group>
+                                <field name="sender_city"/>
+                                <field name="sender_street"/>
+                                <field name="user_id"/>
+                                <field name="date_confirm"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_tree_sdtx_warehouse" model="ir.ui.view">
+            <field name="name">sdtx.warehouse.tree</field>
+            <field name="model">sdtx.warehouse</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="tree">
+                    <field name="name"/>
+                    <field name="warehouse"/>
+                    <field name="sender"/>
+                    <field name="sender_tel"/>
+                    <field name="sender_phone"/>
+                    <field name="sender_city"/>
+                    <field name="sender_street"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!--  窗体事件 查询  Search  graph,gantt-->
+        <record id="action_sdtx_warehouse" model="ir.actions.act_window">
+            <field name="name">sdtx.warehouse.actions</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sdtx.warehouse</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Sender Address
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Configure" id="menu_two_configure" parent="menu_one_sdtx_dddy" sequence="1"/>
+        <menuitem name="Sender Address" id="menu_three_sdtx_warehouse" parent="menu_two_configure" action="action_sdtx_warehouse" sequence="1"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,1 @@
+../../../../../share/pyshared/gdata/blogger/__init__.py

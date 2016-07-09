@@ -1,0 +1,1 @@
+../../../../../share/pyshared/gdata/finance/service.py

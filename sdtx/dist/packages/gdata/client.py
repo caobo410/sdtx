@@ -1,0 +1,1 @@
+../../../../share/pyshared/gdata/client.py

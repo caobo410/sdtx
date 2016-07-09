@@ -1,0 +1,44 @@
+-
+  !record {model: 'res.partner', id: base.res_partner_address_3}:
+    name: Thomas Passot
+    parent_id: base.res_partner_2
+    use_parent_address: True
+    function: Functional Consultant
+    email: thomas.passot@agrolait.example.com
+-
+  !record {model: 'res.partner', id: base.res_partner_address_4}:
+    name: Michel Fletcher
+    parent_id: base.res_partner_2
+    use_parent_address: True
+    function: Analyst
+    email: michel.fletcher@agrolait.example.com
+-
+  !record {model: 'res.partner', id: base.res_partner_address_5}:
+    name: Chao Wang
+    parent_id: base.res_partner_3
+    use_parent_address: True
+    function: Marketing Manager
+    email: chao.wang@chinaexport.example.com
+-
+  !record {model: 'res.partner', id: base.res_partner_address_6}:
+    name: Zhi Ch'ang
+    parent_id: base.res_partner_3
+    use_parent_address: True
+    function: Supervisor
+    email: zhi.chang@chinaexport.example.com
+-
+  !record {model: 'res.partner', id: base.res_partner_main1}:
+    name: Mark Davis
+    customer: False
+    parent_id: base.main_partner
+    use_parent_address: True
+    function: Chief Executive Officer (CEO)
+    email: mark.davis@yourcompany.example.com
+-
+  !record {model: 'res.partner', id: base.res_partner_main2}:
+    name: Roger Scott
+    customer: False
+    parent_id: base.main_partner
+    use_parent_address: True
+    function: Chief Operations Officer (COO)
+    email: roger.scott@yourcompany.example.com

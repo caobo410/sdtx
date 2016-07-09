@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_form_sdtx_express" model="ir.ui.view">
+            <field name="name">sdtx.express.form</field>
+            <field name="model">sdtx.express</field>
+            <field name="arch" type="xml">
+                <form string="窗体名称" version="7.0">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code" />
+                                <field name="user_id" />
+                            </group>
+                            <group>
+                                <field name="name"/>
+                                <field name="field"/>
+                                <field name="date_confirm" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_tree_sdtx_express" model="ir.ui.view">
+            <field name="name">sdtx.express.tree</field>
+            <field name="model">sdtx.express</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="field"/>
+                    <field name="user_id"/>
+                    <field name="date_confirm"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--  窗体事件 查询  Search  graph,gantt-->
+        <record id="action_sdtx_express" model="ir.actions.act_window">
+            <field name="name">sdtx.express.actions</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sdtx.express</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    模块说明
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Express" id="menu_three_sdtx_express" parent="menu_two_configure" action="action_sdtx_express" sequence="4"/>
+
+    </data>
+</openerp>

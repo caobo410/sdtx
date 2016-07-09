@@ -1,0 +1,1 @@
+../../../../share/pyshared/gdata/core.py

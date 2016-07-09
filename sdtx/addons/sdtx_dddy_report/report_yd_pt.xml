@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+        <report
+                id="report_sdtx_dddy_yd_pt_report"
+                model="sdtx.dddy"
+                string="YDO PT Report"
+                name="sdtx_dddy_report.report_yd_pt_main"
+                file="sdtx_dddy_report.report"
+                report_type="qweb-pdf" />
+
+        <template id="report_yd_pt_main">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="report.external_layout">
+                        <div class="page">
+                            <!--summary-->
+                            <div class="row" style="height:14pt;line-height:14pt;text-align:center;font-size:10pt">
+                                <div class="col-xs-3 " t-if="o.sender"><p t-field="o.sender"/></div>
+                                <div class="col-xs-9 " t-if="o.sender"><p t-field="o.sender"/></div>
+                            </div>
+                            <div class="row"  style="height:14pt;font-size:10pt" >
+                                <div class="col-xs-12 "><p>&amp;nbsp;</p></div>
+                            </div>
+                            <div class="row" style="height:50pt;font-size:10pt">
+                                <div class="col-xs-6" t-if="o.sender_city">
+                                    <p>
+                                        <span t-field="o.sender_city"/>
+                                        <span t-field="o.sender_street"/>
+                                    </p>
+                                </div>
+                                <div class="col-xs-6" t-if="o.recipient_city">
+                                    <p>
+                                        <span t-field="o.recipient_city"/>
+                                        <span t-field="o.recipient_street"/>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row"  style="height:14pt;line-height:14pt;text-align:center;font-size:10pt" >
+                                <div class="col-xs-4" t-if="o.sender_tel"><p t-field="o.sender_tel"/></div>
+                                <div class="col-xs-8" t-if="o.recipient_tel"><p t-field="o.recipient_tel"/></div>
+                            </div>
+                            <div class="row"  style="height:30pt;font-size:10pt" >
+                                <div class="col-xs-12 "><p>&amp;nbsp;</p></div>
+                            </div>
+                            <div class="row" style="height:20pt;font-size:12pt">
+                                <div class="col-xs-3" t-if="o.commodity"><p t-field="o.commodity"/></div>
+                                <div class="col-xs-3 col-xs-offset-1" t-if="o.number"><p t-field="o.number"/></div>
+                            </div>
+                            <div class="row"  style="height:60pt;font-size:12pt" >
+                                <div class="col-xs-12 "><p>&amp;nbsp;</p></div>
+                            </div>
+                            <div class="row" style="height:50pt;font-size:10pt">
+                                <div class="col-xs-6 col-xs-offset-2" t-if="o.date_confirm">
+                                    <p>
+                                        <span t-field="o.sender"/>
+                                        <span t-field="o.date_confirm"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</openerp>

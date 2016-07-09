@@ -1,0 +1,101 @@
+centos7 系统默认的python 版本为 2.7.5.可以直接使用。
+
+
+首先将该目录下所有的文件都复制到centos系统中。存放位置建议为： /opt/shmj/dist/(odoo的conf文件中对应的addons的位置默认是这里)
+
+
+需要安装的库：
+yum -y install wget gcc zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libffi-devel libxslt libxslt-devel libxml2 libxml2-devel openldap-devel libjpeg-turbo-devel openjpeg-devel libtiff-devel libyaml-devel python-virtualenv git libpng12 libXext xorg-x11-fonts-Type1 python-devel
+
+
+安装和配置 postgres： 
+yum -y install postgresql-server postgresql-devel
+postgresql-setup initdb
+systemctl enable postgresql.service
+修改： /var/lib/pgsql/data/pg_hba.conf 文件中的method 列，修改为： trust
+修改： /var/lib/pgsql/data/postgresql.conf 文件将 listenport 和 host 都改下
+systemctl start postgresql.service
+
+
+安装python 需要的模块:
+大部分的模块都在packages目录下下，将该目录下的内容复制到 /usr/lib/python2.7/site-pakages/ 目录下。
+然后安装installs目录下的：PIL/urllib3/unittest2/pscopg2/psutil.
+注： PIL依赖 三个 so文件，这三个文件都在/usr/lib64/目录下（libz.so/libjpeg.so/libfreetype.so）,给三个文件创建符号链接：
+ln -s /usr/lib64/libz.so  /usr/lib/
+ln -s /usr/lib64/libjpeg.so  /usr/lib/
+ln -s /usr/lib64/libfreetype.so  /usr/lib/
+
+
+配置文件所在的目录： /etc/shmj/shmj-server.conf
+启动命令：
+ systemctl start shmj_mes.service
+
+
+
+
+以下是在root用户下使用的命令列表（本人在安装过程中使用的命令）：
+
+#安装系统需要的动态库和基础程序
+yum install make gcc kernel-devel kernel-headers
+#新建目录存放下载的内容，本次使用的方式为 scp
+cd /opt
+mkdir shmj
+cd shmj/
+scp labracy@192.168.0.33:/home/labarcy/odoo/odoo/dist.tar ./
+tar -vxf dist.tar
+cd dist
+
+#安装odoo运行需要的动态库等
+yum -y install wget gcc zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libffi-devel libxslt libxslt-devel libxml2 libxml2-devel openldap-devel libjpeg-turbo-devel openjpeg-devel libtiff-devel libyaml-devel python-virtualenv git libpng12 libXext xorg-x11-fonts-Type1 python-devel
+
+#安装/配置和启动 postgres数据库
+yum -y install postgresql-server postgresql-devel
+postgresql-setup initdb
+systemctl enable postgresql.service
+vim /var/lib/pgsql/data/pg_hba.conf
+vim /var/lib/pgsql/data/postgresql.conf
+systemctl start postgresql.service
+
+安装python 的一些公用模块
+cd packages/
+\cp -r * /usr/lib/python2.7/site-packages/
+cd ..
+cd installs/
+ln -s /usr/lib64/libz.so  /usr/lib/
+ln -s /usr/lib64/libjpeg.so  /usr/lib/
+ln -s /usr/lib64/libfreetype.so  /usr/lib/
+tar -vxf PIL-1.1.7.tar.gz
+cd PIL-1.1.7/
+python setup.py build
+python setup.py install
+cd ..
+tar -vxf psutil-3.3.0.tar.gz
+cd psutil-3.3.0/
+python setup.py build
+python setup.py install
+cd ..
+tar -vxf urllib3-1.14.tar.gz
+cd urllib3-1.14/
+python setup.py build
+python setup.py install
+cd ..
+tar -vxf unittest2-1.1.0.tar.gz
+cd unittest2-1.1.0/
+python setup.py build
+python setup.py install
+cd ..
+tar -vxf psycopg2-2.6.1.tar.gz
+cd psycopg2-2.6.1/
+python setup.py build
+python setup.py install
+
+#安装odoo，以及配置启动脚本
+cd ../..
+rpm -i shmj-1.1rc0-1.noarch.rpm
+shmj_mes.py -c /etc/shmj/shmj-server.conf
+chmod 777 /etc/shmj/shmj-server.conf
+
+#使用其他非root用户启动服务
+su - sa
+systemctl start shmj_mes.service
+

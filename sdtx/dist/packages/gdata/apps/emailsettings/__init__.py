@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/gdata/apps/emailsettings/__init__.py

@@ -1,0 +1,1 @@
+../../../../../share/pyshared/gdata/webmastertools/service.py

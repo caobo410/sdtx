@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/gdata/apps/adminsettings/__init__.py

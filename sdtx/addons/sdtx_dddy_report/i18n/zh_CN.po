@@ -1,0 +1,89 @@
+# Translation of SHMJ Server.
+# This file contains the translation of the following modules:
+# 	* sdtx_dddy_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: SHMJ Server 1.1rc\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-05 14:39+0000\n"
+"PO-Revision-Date: 2016-07-05 22:41+0800\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: sdtx_dddy_report
+#: view:website:sdtx_dddy_report.report_gt_pt_main
+#: view:website:sdtx_dddy_report.report_kj_pt_main
+#: view:website:sdtx_dddy_report.report_yd_pt_main
+#: view:website:sdtx_dddy_report.report_yt_pt_main
+msgid "&nbsp;"
+msgstr "&nbsp;"
+
+#. module: sdtx_dddy_report
+#: model:ir.actions.report.xml,name:sdtx_dddy_report.report_sdtx_dddy_kj_pt_report
+msgid "Fast PT Report"
+msgstr "快捷快递(普通)"
+
+#. module: sdtx_dddy_report
+#: model:ir.actions.report.xml,name:sdtx_dddy_report.report_sdtx_dddy_gt_bz_report
+msgid "GTO BZ Report"
+msgstr "国通快递(标准)"
+
+#. module: sdtx_dddy_report
+#: model:ir.actions.report.xml,name:sdtx_dddy_report.report_sdtx_dddy_gt_pt_report
+msgid "GTO PT Report"
+msgstr "国通快递(普通)"
+
+#. module: sdtx_dddy_report
+#: view:website:sdtx_dddy_report.report_gt_bz_main
+msgid "SDTX"
+msgstr "顺道天下"
+
+#. module: sdtx_dddy_report
+#: model:ir.actions.report.xml,name:sdtx_dddy_report.report_sdtx_dddy_yd_pt_report
+msgid "YDO PT Report"
+msgstr "圆通快递(普通)"
+
+#. module: sdtx_dddy_report
+#: model:ir.actions.report.xml,name:sdtx_dddy_report.report_sdtx_dddy_yt_pt_report
+msgid "YTO Report"
+msgstr "圆通面单"
+
+#. module: sdtx_dddy_report
+#: view:website:sdtx_dddy_report.report_gt_bz_main
+msgid "分割线"
+msgstr "分割线"
+
+#. module: sdtx_dddy_report
+#: view:website:sdtx_dddy_report.report_gt_bz_main
+msgid ""
+"快件送达收件人地址，经收件人或收件人(寄\n"
+"                                            件人)允许的代收人签字，视为送达您的签\n"
+"                                            字代表您已验收此包裹，并已确认商品信息\n"
+"                                            无误，包装完好，没有划痕、破损等"
+msgstr ""
+"快件送达收件人地址，经收件人或收件人(寄\n"
+"                                            件人)允许的代收人签字，视为送达您的签\n"
+"                                            字代表您已验收此包裹，并已确认商品信息\n"
+"                                            无误，包装完好，没有划痕、破损等"
+
+#. module: sdtx_dddy_report
+#: view:website:sdtx_dddy_report.report_gt_bz_main
+msgid "时间："
+msgstr "时间："
+
+#. module: sdtx_dddy_report
+#: view:website:sdtx_dddy_report.report_gt_bz_main
+msgid "标准快递"
+msgstr "标准快递"
+
+#. module: sdtx_dddy_report
+#: view:website:sdtx_dddy_report.report_gt_bz_main
+msgid "签收人："
+msgstr "签收人："

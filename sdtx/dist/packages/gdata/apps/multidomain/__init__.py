@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/gdata/apps/multidomain/__init__.py

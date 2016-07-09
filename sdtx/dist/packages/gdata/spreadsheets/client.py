@@ -1,0 +1,1 @@
+../../../../../share/pyshared/gdata/spreadsheets/client.py

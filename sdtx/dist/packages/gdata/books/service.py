@@ -1,0 +1,1 @@
+../../../../../share/pyshared/gdata/books/service.py

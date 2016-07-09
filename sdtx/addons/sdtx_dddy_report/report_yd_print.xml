@@ -1,0 +1,40 @@
+<openerp>
+    <data>
+        <template id="report_yd_main">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="report.external_layout">
+                        <div class="page">
+                            <!--summary-->
+                            <div class="row mt16 mb16 ">
+                                <div class="col-xs-4 col-xs-offset-1" style="font-size:18px" t-if="o.sender"><p t-field="o.sender"/></div>
+                                <div class="col-xs-5 col-xs-offset-2" style="font-size:18px" t-if="o.recipient"><p t-field="o.recipient"/></div>
+                                <br/>
+                                <div class="col-xs-12" style="font-size:18px"><p>&amp;nbsp;</p></div>
+                                <br/>
+                                <div class="col-xs-2" style="font-size:18px" t-if="o.sender_province"><p t-field="o.sender_province"/></div>
+                                <div class="col-xs-2 " style="font-size:18px" t-if="o.sender_city"><p t-field="o.sender_city"/></div>
+                                <div class="col-xs-2" style="font-size:18px" t-if="o.sender_area"><p t-field="o.sender_area"/></div>
+                                <div class="col-xs-2 col-xs-offset-1" style="font-size:18px" t-if="o.recipient_province"><p t-field="o.recipient_province"/></div>
+                                <div class="col-xs-2" style="font-size:18px" t-if="o.recipient_city"><p t-field="o.recipient_city"/></div>
+                                <div class="col-xs-1" style="font-size:18px" t-if="o.recipient_area"><p t-field="o.recipient_area"/></div>
+                                <div class="col-xs-6 " style="font-size:18px" t-if="o.sender_street"><p t-field="o.sender_street"/></div>
+                                <div class="col-xs-5 col-xs-offset-1" style="font-size:18px" t-if="o.recipient_street"><p t-field="o.recipient_street"/></div>
+                                <br/>
+                                <!--<div class="col-xs-12 " style="font-size:18px"><p>&amp;nbsp;</p></div>-->
+                                <br/>
+                                <div class="col-xs-4 col-xs-offset-2" style="font-size:18px" t-if="o.sender_tel"><p t-field="o.sender_tel"/></div>
+                                <div class="col-xs-4 col-xs-offset-2" style="font-size:18px" t-if="o.recipient_tel"><p t-field="o.recipient_tel"/></div>
+                                <br/>
+                                <div class="col-xs-12 " style="font-size:18px"><p>&amp;nbsp;</p></div>
+                                <div class="col-xs-12 " style="font-size:18px"><p>&amp;nbsp;</p></div>
+                                <br/>
+                                <div class="col-xs-6" style="font-size:18px" t-if="o.commodity"><p t-field="o.commodity"/></div><br/>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</openerp>

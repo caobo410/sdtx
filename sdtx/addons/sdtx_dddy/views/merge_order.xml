@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="merge_order_view" model="ir.ui.view">
+            <field name="name">merge.order.form</field>
+            <field name="model">merge.order</field>
+            <field name="arch" type="xml">
+                <form string="Merge Order">
+                    <p class="oe_grey">
+                        Merge Order
+                    </p>
+                    <group>
+                        <group>
+                            <field name="date_time"/>
+                        </group>
+                        <group>
+                            <field name="user_id"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Merge Order" name="merge_order" type="object" default_focus="1" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        
+        <act_window id="action_merge_order"
+            multi="True"
+            key2="client_action_multi" name="Merge Order"
+            res_model="merge.order" src_model="sdtx.dddy"
+            view_mode="form" target="new" view_type="form" />
+
+    </data>
+</openerp>

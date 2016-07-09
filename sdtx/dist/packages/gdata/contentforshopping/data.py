@@ -1,0 +1,1 @@
+../../../../../share/pyshared/gdata/contentforshopping/data.py

@@ -1,0 +1,1 @@
+../../../../../share/pyshared/gdata/photos/service.py

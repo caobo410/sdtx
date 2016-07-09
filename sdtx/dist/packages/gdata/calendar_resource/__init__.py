@@ -1,0 +1,1 @@
+../../../../../share/pyshared/gdata/calendar_resource/__init__.py

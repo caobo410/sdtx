@@ -1,0 +1,1 @@
+../../../../../share/pyshared/gdata/contentforshopping/__init__.py

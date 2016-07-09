@@ -1,0 +1,1 @@
+../../../../../../share/pyshared/gdata/tlslite/integration/SMTP_TLS.py

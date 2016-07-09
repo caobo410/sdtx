@@ -1,0 +1,1 @@
+../../../../../share/pyshared/gdata/contacts/__init__.py

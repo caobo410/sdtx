@@ -62,6 +62,7 @@
                             <field name='buyers' />
                             <field name='desk_no' />
                             <field name='people_num' />
+                            <field name='sum_gwq' />
                         </group>
                         <group>
                             <field name='shop'/>
@@ -69,6 +70,7 @@
                             <field name='QR' />
                             <field name='print_time' />
                             <field name='order_time' />
+                            <field name='sum_jf' />
                         </group>
                     </group>
                     <notebook colspan="4">

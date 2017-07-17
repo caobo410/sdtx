@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+        <report
+                id="report_sdtx_pos"
+                model="sdtx.pos"
+                string="report_sdtx_pos"
+                name="sdtx_ckgl_report.report_sdtx_pos_main"
+                file="sdtx_pos_report"
+                report_type="qweb-pdf" />
+        <template id="report_sdtx_pos_main">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <!--<t t-call="report.external_layout">-->
+                    <div class="page">
+                        <!--summary-->
+                        <div class="col-xs-12" style="font-size:22px; text-align:center">
+                            <p>顺道天下</p>
+                        </div>
+                        <div class="col-xs-12" style="font-size:20px; text-align:center" t-if="o.shop">
+                            <p t-field="o.shop"/>
+                        </div>
+                        <div class="col-xs-12" style="font-size:16px;height:20px; line-height: 18px;font-size:14px;padding:3px 0px 3px 0px " t-if="o.print_time">
+                            <p t-field="o.print_time"/>
+                        </div>
+                        <div class="col-xs-12" style="font-size:16px;height:20px; line-height: 18px;font-size:14px;padding:3px 0px 3px 0px" t-if="o.name">
+                            <p t-field="o.name"/>
+                        </div>
+                        <div class="col-xs-12" style="font-size:16px;height:20px; line-height: 18px;font-size:14px;padding:3px 0px 3px 0px" t-if="o.order_time">
+                            <p t-field="o.order_time"/>
+                        </div>
+                        <div class="col-xs-12" style="font-size:16px;height:20px; line-height: 18px;font-size:14px;padding:3px 0px 3px 0px" t-if="o.desk_no">
+                            <p t-field="o.desk_no"/>
+                        </div>
+                        <div class="col-xs-12" style="font-size:16px;height:30px; line-height: 18px;font-size:14px;padding:3px 0px 3px 0px" t-if="o.people_num">
+                            <p t-field="o.people_num"/>
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr >
+                                    <td width="300" style="text-align: center" colspan="4">*****************************************************</td>
+                                </tr>
+                                <tr>
+                                    <td width="120" style="font-size:16px;padding-left:0px;padding-right:0px;text-align:center">品名</td>
+                                    <td width="50" style="font-size:16px;padding-left:0px;padding-right:0px;text-align:center">数量</td>
+                                    <td width="60" style="font-size:16px;padding-left:0px;padding-right:0px;text-align:center">单价</td>
+                                    <td width="70" style="font-size:16px;padding-left:0px;padding-right:0px;text-align:center">小计</td>
+                                </tr>
+                                <tr>
+                                    <td width="300" style="text-align: center" colspan="4">*****************************************************</td>
+                                </tr>
+                                <tr t-foreach="o.line_id" t-as="l" height ="20px">
+                                    <td width="120">
+                                        <span t-field="l.name"/>
+                                    </td>
+                                    <td width="50" style="text-align: right">
+                                        <span t-field="l.num"/>
+                                    </td>
+                                    <td width="60" style="text-align: right">
+                                        <span t-field="l.price"/>
+                                    </td>
+                                    <td width="70" style="text-align: right">
+                                        <span t-field="l.sum_price"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p>**************************************************</p>
+                            </div>
+                            <div class="col-xs-6" style="text-align: left">
+                                <p>订单总金额：</p>
+                            </div>
+                            <div class="col-xs-6" style="font-size:16px;text-align: right" t-if="o.sum_price"><p t-field="o.sum_price"/></div>
+                            <div class="col-xs-6" style="text-align: left">
+                                <p>获得积分：</p>
+                            </div>
+                            <div class="col-xs-6" style="font-size:16px;text-align: right" t-if="o.sum_jf"><p t-field="o.sum_jf"/></div>
+                            <div class="col-xs-6" style="text-align: left">
+                                <p>获得购物券：</p>
+                            </div>
+                            <div class="col-xs-6" style="font-size:16px;text-align: right" t-if="o.sum_gwq"><p t-field="o.sum_gwq"/></div>
+                        </div>
+                        <div class="row" style="text-align:center">
+                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', o.QR, 600, 150)" style="width:200px;height:200px;"/>
+                        </div>
+                        <!--<div class="row" style="text-align:center" t-if="o.QR"><p t-field="o.QR"/></div>-->
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</openerp>

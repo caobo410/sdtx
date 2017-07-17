@@ -1,0 +1,101 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <title>小票打印</title>
+                <style type="text/css">
+                    *{margin:0; padding:0;}
+                    ul,ol,dl{padding:0; margin:0;}
+                    li{list-style:none;}
+                    body{font-size:14px;font-family:"微软雅黑","宋体";}
+                    h1,h2,h3,h4,h5,h6{ font-size:14px; font-weight:normal;}
+                    strong,b{ font-weight:normal;}
+                    em,i{font-style:normal; }
+                    a{text-decoration:none; color: #000; }
+
+                    .print_box{ float: left; width:630px; height: auto; padding: 40px 40px 80px 40px; background: #fff;}
+                    .print_box .logo_box{ width: 630px; height: 213px; background: #fff; overflow: hidden;}
+                    .print_box .logo_box .pic{ float: left; width: 92px; height:180px; margin: 16px 14px 18px 100px; overflow: hidden;}
+                    .print_box .logo_box .pic img{ width: 92px; height: 92px;}
+                    .print_box .logo_box em{ float: left; width: auto; height: 92px; margin-top: 16px; line-height: 92px; font-size: 70px; color: #5a5a5a; overflow: hidden;}
+                    .print_box .logo_box b{ float: left; font-size: 35px; color: #7e7e7f; margin-top: 12px;}
+                    .content_print{ float: left; width: 630px; height: auto; background: #fff;}
+                    .content_print ul{ width: 630px; height: auto;}
+                    .content_print ul li{ float: left; width: 630px; min-height: 60px;font-size: 20px; background:#fff url(../image/xuxain.png) no-repeat center top; padding: 20px 0;}
+                    .content_print ul li .time{ float: left; width: 630px; height: 60px; line-height:60px; font-size: 28px;}
+                    .content_print ul li .goodname{ float: left; width: 290px; height:60px; line-height: 90px; text-indent: 10px;}
+                    .content_print ul li .num{ float: left; width: 98px; height:60px; line-height: 90px;}
+                    .content_print ul li .price{ float: left; width: 120px; height:60px; line-height: 90px;}
+                    .content_print ul li .add{ float: left; width: 110px; height:60px; line-height: 90px;}
+                    .content_print ul li .goodname-con{ float: left; width: 270px; line-height: 30px;  margin-left: 10px;}
+                    .content_print ul li .amount{ float: left; width: 98px;line-height: 30px; text-indent: 15px;}
+                    .content_print ul li .price2{ float: left; width: 120px;  line-height: 30px; text-indent: 10px;}
+                    .content_print ul li .add_amount{ float: left; width: 110px; line-height: 30px;}
+                    .content_print ul li .print_price{ float: left; width: 300px; font-size: 24px; text-indent: 10px;}
+                    .content_print ul li .show_price{ float: right; width: 300px; margin-right: 18px; text-align: right; font-size: 24px;}
+                    .content_print .p-code{ width: 355px; height: 355px; margin-left: 140px;}
+                    .content_print .p-code img{ width: 355px; height: 355px; }
+                </style>
+            </head>
+            <body>
+                <div class="print_box">
+                    <div class="logo_box">
+                        <span class="pic"><img src="image/logo_hui.png"/></span>
+                        <em>顺道天下</em>
+                        <b>济南喜来登酒店</b>
+                    </div>
+                    <div class="content_print">
+                        <ul>
+                            <li>
+                                <span class="time">打印时间：2017-01-10  14:23:56</span>
+                                <span class="time">订单编号：0000252523001</span>
+                                <span class="time">订单状态：已付款</span>
+                                <span class="time">订单日期：2017-01-12  15:26:23</span>
+                                <span class="time">桌&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：011</span>
+                                <span class="time">就餐人数：12</span>
+                            </li>
+                            <li>
+                                <span class="goodname">品名</span>
+                                <span class="num">数量</span>
+                                <span class="price">单价</span>
+                                <span class="add">小计</span>
+                            </li>
+                            <li>
+                                <span class="goodname-con">
+                                    Apple MacBok12英寸
+                                    笔记本电脑(Retina显
+                                    示屏/8G/512G/金色）
+                                    MKN2CH/A
+                                </span>
+                                <span class="amount">
+                                    322
+                                </span>
+                                <span class="price2">
+                                    ￥1212.00
+                                </span>
+                                <span class="add_amount">
+                                    ￥12102.00
+                                </span>
+
+                            </li>
+                            <li>
+                                <span class="print_price">订单总金额：</span>
+                                <span class="show_price">￥6999.00</span>
+                                <span class="print_price">支付折扣币：</span>
+                                <span class="show_price">6999</span>
+                            </li>
+                            <span class="p-code"><img src="image/print_code.png" /></span>
+                        </ul>
+                    </div>
+                </div>
+
+            </body>
+        </html>
+
+    </data>
+</openerp>

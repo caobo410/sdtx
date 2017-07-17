@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_tree_ckgl_dddy" model="ir.ui.view">
+            <field name="name">ckgl.dddy</field>
+            <field name="model">ckgl.dddy</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name"/>
+                    <field name="warehouse"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_tree_sdtx_pos" model="ir.ui.view">
+            <field name="name">sdtx.pos</field>
+            <field name="model">sdtx.pos</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name='name'/>
+                    <field name='shop'/>
+                    <field name='desk_no'/>
+                    <field name='people_num'/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</openerp>

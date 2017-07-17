@@ -1,0 +1,38 @@
+@charset "utf-8";
+/*share*/
+*{margin:0; padding:0;}
+em,i{ font-style:normal; }
+body{color:#333;background:#e2e2e2;font-family:Microsoft YaHei;line-height:1.785;
+    ont-family: Arial,"微软雅黑","Microsoft yahei","Hiragino Sans GB","冬青黑体简体中文 w3","Microsoft Yahei","Hiragino Sans GB","冬青黑体简体中文 w3",STXihei,"华文细黑",SimSun,"宋体",Heiti,"黑体",sans-serif;
+}
+/* CSS Document */
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p,seletc,option{padding:0; margin:0 auto;}
+ul,li { list-style:none;}
+a{text-decoration:none;color:#323232;}
+a:hover{color:#009feb;}
+img {border:none;}
+.clear {clear:both;overflow:hidden;height:0;}
+body{margin:0;padding:0;font-size:14px; color:#323232;font-family:"微软雅黑"; background:#fff;}
+
+/*1mm=3.78px   换算单位*/
+
+.main{ width: 1056.132px; height:910.98px; background: #FFF;  overflow: hidden;}
+.main .main_box{ width: 1016.132px; height:870.98px; background: #FFF;margin: 20px; overflow: hidden;}
+.table1{width:90%;margin:0 auto; margin-top: 30px;border-spacing: 2px;}
+.table1 td{height:24px;background:#fff;}
+.table1 td{text-align:left; text-indent:0.1em;}
+.table1 td.tal{text-align:left;}
+.table1 thead td{ text-align: center;position: relative;}
+
+.table1 td.juzhong{ height: 30px; line-height: 30px; text-align: center; font-size:24px; color: #323232;}
+.table1 .name{ width: 260px; height: 24px; line-height: 24px; overflow: hidden;}
+.table1 td.zi_right{text-align: right; }
+.table1 td.ju{ text-align: center; }
+
+.table{width:100%;margin:0 auto; border-spacing: 2px; border:solid 1pt Black;}
+.table td{height:28px;background:#fff;border-right:1px solid Black;border-bottom:1px solid Black;}
+.table td{text-align:left; text-indent:0.1em;}
+.table thead td{ text-align: center;position: relative;}
+.table td.name{border-right:1px solid Black;overflow: hidden;text-align:left;text-indent:0.1px;}
+.table td.zi_right{text-align: right; }
+.table td.ju{ text-align: center; }

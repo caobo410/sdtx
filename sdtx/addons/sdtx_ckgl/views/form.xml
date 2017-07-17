@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+    <data>
+        <record id='view_form_ckgl_dddy' model='ir.ui.view'>
+            <field name='name'>ckgl.dddy.form</field>
+            <field name='model'>ckgl.dddy</field>
+            <field name='arch' type='xml'>
+                <form string='窗体名称' version='7.0'>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name='name' />
+                            <field name='warehouse' />
+                            <field name='state' />
+                            <field name='send_user' />
+                            <field name='tel' />
+                            <field name='address' />
+                            <field name='send_date' />
+                        </group>
+                        <group>
+                            <field name='express'/>
+                            <field name='express_code' />
+                            <field name='send_money' />
+                            <field name='sum_money' />
+                            <field name='messages' />
+                            <field name='user_id' />
+                            <field name='date_confirm' />
+                        </group>
+                        <button string="Merge Order" name="merge_order" type="object" default_focus="1" class="oe_highlight"/>
+                    </group>
+                    <notebook colspan="4">
+                        <page string="页卡">
+                            <field name="line_id">
+                                <tree string="明细" editable="bottom">
+                                    <field name="code"/>
+                                    <field name="name"/>
+                                    <field name="spec"/>
+                                    <field name="unit"/>
+                                    <field name="number"/>
+                                    <field name="money"/>
+                                    <field name="sum_money"/>
+                                    <field name="order_code"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id='view_form_sdtx_pos' model='ir.ui.view'>
+            <field name='name'>sdtx.pos.form</field>
+            <field name='model'>sdtx.pos</field>
+            <field name='arch' type='xml'>
+                <form string='窗体名称' version='7.0'>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name='name' />
+                            <field name='state' />
+                            <field name='buyers' />
+                            <field name='desk_no' />
+                            <field name='people_num' />
+                        </group>
+                        <group>
+                            <field name='shop'/>
+                            <field name='sum_price' />
+                            <field name='QR' />
+                            <field name='print_time' />
+                            <field name='order_time' />
+                        </group>
+                    </group>
+                    <notebook colspan="4">
+                        <page string="页卡">
+                            <field name="line_id">
+                                <tree string="明细" editable="bottom">
+                                    <field name="name"/>
+                                    <field name="num"/>
+                                    <field name="price"/>
+                                    <field name="sum_price"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

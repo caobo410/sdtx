@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+        <report
+                id="report_sdtx_dbd"
+                model="ckgl.dddy"
+                string="report_sdtx_dbd"
+                name="sdtx_ckgl_report.report_sdtx_dbd_main"
+                file="sdtx_ckgl_report"
+                report_type="qweb-pdf" />
+        <template id="report_sdtx_dbd_main">
+            <t t-call="report.html_container">
+                    <t t-foreach="docs" t-as="o">
+                        <!--<t t-call="report.external_layout">-->
+                        <div class="page">
+                            <!--summary-->
+                            <style type="text/css">
+                                 .table1{margin:2 auto;width:100%;border-spacing:1px;border-collapse:collapse;table-layout:fixed;}
+                                .table1 td{height:12px;}
+                                .table1 td{word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px;}
+                                .table1 td.juzhong{ height: 50px; line-height: 50px; text-align: center; font-size:22px; color: #323232;}
+                                .table1 td.zi_right{text-align: right;}
+                                .table1 td.ju{ text-align: center;}
+
+                                .table{margin:10 auto;width:100%;border-spacing:1px;border:1px solid #dddddd;border-collapse:collapse;table-layout:fixed;}
+                                .table td{height:12px;border-right:1px solid #dddddd;border-bottom:1px solid #dddddd;}
+                                .table td{word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px;}
+                                .table td.zi_right{text-align: right;}
+                                .table td.ju{ text-align: center;}
+                            </style>
+                            <table class="table1">
+                                <tbody>
+                                    <tr height="0px">
+                                        <td width="70" style="text-align: center"/>
+                                        <td width="130" style="text-align: center"/>
+                                        <td width="70" style="text-align: center"/>
+                                        <td width="130" style="text-align: center"/>
+                                        <td width="70" style="text-align: center"/>
+                                        <td width="130" style="text-align: center"/>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="6" class="juzhong">调拨单</td>
+                                    </tr>
+                                    <tr>
+                                        <td>单据编号</td>
+                                        <td>
+                                            <span t-field="o.name"/>
+                                        </td>
+                                       <td>调出仓库</td>
+                                        <td>
+                                            <span t-field="o.warehouse"/>
+                                        </td>
+                                        <td>审核状态</td>
+                                        <td>
+                                            <span t-field="o.state"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>打包件数</td>
+                                        <td>
+                                            <span t-field="o.number"/>
+                                        </td>
+                                       <td>调入仓库</td>
+                                        <td>
+                                            <span t-field="o.warehouse_in"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--end:打印内容上半部分区域-->
+                            <!--begin:打印内容下半部分区域-->
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td width="70" style="text-align: center">商品编号</td>
+                                        <td width="220" style="text-align: center">商品名称</td>
+                                        <td width="60" style="text-align: center">规格型号</td>
+                                        <td width="60" style="text-align: center">单位</td>
+                                        <td width="60" style="text-align: center">数量</td>
+                                        <td width="60" style="text-align: center">单价</td>
+                                        <td width="70" style="text-align: center">金额</td>
+                                    </tr>
+                                    <tr t-foreach="o.line_id" t-as="l">
+                                        <!--<td>-->
+                                        <!--<t>-->
+                                        <!--<span t-esc="o_index+1"/>-->
+                                        <!--</t> -->
+                                        <!--</td>-->
+                                        <td width="70">
+                                            <span t-field="l.code"/>
+                                        </td>
+                                        <td width="220">
+                                            <span t-field="l.name"/>
+                                        </td>
+                                        <td width="60">
+                                            <span t-field="l.spec"/>
+                                        </td>
+                                        <td width="60">
+                                            <span t-field="l.unit"/>
+                                        </td>
+                                        <td class="zi_right" width="60">
+                                            <span t-field="l.number"/>
+                                        </td>
+                                        <td class="zi_right" width="60">
+                                            <span t-field="l.money"/>
+                                        </td>
+                                        <td class="zi_right" width="70">
+                                            <span t-field="l.sum_money"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="row mt16 mb16 ">
+                                <div class="col-xs-2" width="70" style="font-size:12px"><p align="center">录入人</p></div>
+                                <div class="col-xs-2" width="130" style="font-size:12px" t-if="o.operator"><p t-field="o.operator"/></div>
+                                <div class="col-xs-2" width="70" style="font-size:12px"><p align="center">审核人</p></div>
+                                <div class="col-xs-2" width="130" style="font-size:12px" t-if="o.check_user"><p t-field="o.check_user"/></div>
+                                <div class="col-xs-2" width="70" style="font-size:12px"><p align="center">打印日期</p></div>
+                                <div class="col-xs-2" width="130" style="font-size:12px" t-if="o.date_confirm"><p t-field="o.date_confirm"/></div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+        </template>
+    </data>
+</openerp>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--  窗体事件 查询  Search  graph,gantt-->
+        <record id="action_ckgl_dddy" model="ir.actions.act_window">
+          <field name="name">actions.ckgl.dddy</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">ckgl.dddy</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+              模块说明
+            </p>
+          </field>
+        </record>
+
+        <!--  窗体事件 查询  Search  graph,gantt-->
+        <record id="action_sdtx_pos" model="ir.actions.act_window">
+          <field name="name">actions.sdtx.pos</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">sdtx.pos</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+              模块说明
+            </p>
+          </field>
+        </record>
+
+    </data>
+</openerp>

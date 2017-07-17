@@ -18,7 +18,7 @@
                             .table1{margin:2 auto;width:100%;border-spacing:1px;border-collapse:collapse;table-layout:fixed;}
                             .table1 td{height:12px;}
                             .table1 td{word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px;}
-                            .table1 td.juzhong{ height: 50px; line-height: 50px; text-align: center; font-size:22px; color: #323232;}
+                            .table1 td.juzhong{ height: 50px; line-height: 50px; text-align: right; font-size:22px; color: #323232;}
                             .table1 td.zi_right{text-align: right;}
                             .table1 td.ju{ text-align: center;}
 
@@ -39,7 +39,10 @@
                                     <td width="130" style="text-align: center"/>
                                 </tr>
                                 <tr>
-                                    <td colspan="6" class="juzhong">销售出库单</td>
+                                    <td colspan="3" class="juzhong">销售出库单</td>
+                                     <td colspan="3" class="zi_right">
+                                      <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 300, 50)" style="width:200px;height:50px;"/>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td width="70">单据编号</td>

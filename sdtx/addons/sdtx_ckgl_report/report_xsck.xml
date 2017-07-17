@@ -53,9 +53,9 @@
                                     <td width="140">
                                         <span t-field="o.warehouse"/>
                                     </td>
-                                    <td width="70">审批状态</td>
-                                    <td width="140">
-                                        <span t-field="o.state"/>
+                                    <td>订单类型</td>
+                                    <td>
+                                        <span t-field="o.type"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -67,37 +67,11 @@
                                     <td>
                                         <span t-field="o.tel"/>
                                     </td>
-                                    <td>订单类型</td>
-                                    <td>
-                                        <span t-field="o.type"/>
-                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>快递公司</td>
-                                    <td>
-                                        <span t-field="o.express"/>
-                                    </td>
-                                    <td>快递单号</td>
-                                    <td>
-                                        <span t-field="o.express_code"/>
-                                    </td>
-                                    <td>打包件数</td>
-                                    <td>
-                                        <span t-field="o.number"/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>运费</td>
-                                    <td>
-                                        <span t-field="o.send_money"/>
-                                    </td>
                                     <td>收货地址</td>
-                                    <td>
+                                    <td colspan="5">
                                         <span t-field="o.address"/>
-                                    </td>
-                                    <td>订单编号</td>
-                                    <td>
-                                        <span t-field="o.order_code"/>
                                     </td>
                                 </tr>
                             </tbody>
@@ -107,20 +81,13 @@
                         <table class="table">
                             <tbody>
                                 <tr>
-                                    <td width="70" style="text-align: center">商品编号</td>
-                                    <td width="220" style="text-align: center">商品名称</td>
-                                    <td width="60" style="text-align: center">规格型号</td>
-                                    <td width="60" style="text-align: center">单位</td>
-                                    <td width="60" style="text-align: center">数量</td>
-                                    <td width="60" style="text-align: center">单价</td>
-                                    <td width="70" style="text-align: center">金额</td>
+                                    <td width="80" style="text-align: center">商品编号</td>
+                                    <td width="270" style="text-align: center">商品名称</td>
+                                    <td width="120" style="text-align: center">规格型号</td>
+                                    <td width="70" style="text-align: center">单位</td>
+                                    <td width="70" style="text-align: center">数量</td>
                                 </tr>
                                 <tr t-foreach="o.line_id" t-as="l" height="20px">
-                                    <!--<td>-->
-                                    <!--<t>-->
-                                    <!--<span t-esc="o_index+1"/>-->
-                                    <!--</t> -->
-                                    <!--</td>-->
                                     <td>
                                         <span t-field="l.code"/>
                                     </td>
@@ -135,12 +102,6 @@
                                     </td>
                                     <td class="zi_right">
                                         <span t-field="l.number"/>
-                                    </td>
-                                    <td class="zi_right">
-                                        <span t-field="l.money"/>
-                                    </td>
-                                    <td class="zi_right">
-                                        <span t-field="l.sum_money"/>
                                     </td>
                                 </tr>
                             </tbody>
